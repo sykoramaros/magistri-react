@@ -1,5 +1,13 @@
-import axios from "axios";
+import axios from "axios"
 
-export const UpdateStudent = (id, student) => {
-  return axios.put(`http://localhost:8080/api/students/${id}`, student)
+export const UpdateStudent = async (id, student) => {
+  try {
+    const response = await axios.put(
+      `http://localhost:8080/api/students/${id}`,
+      student
+    );
+    return response.data
+  } catch (error) {
+    throw error
+  }
 }

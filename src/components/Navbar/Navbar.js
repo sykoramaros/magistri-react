@@ -15,13 +15,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/students">
-                Students{" "}
+              <Link className="nav-link text-white" to="/privacy">
+                Privacy{" "}
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link text-white" to="/privacy">
-                Privacy{" "}
+              <Link className="nav-link text-white" to="/students">
+                Students{" "}
               </Link>
             </li>
             <li className="nav-item">
@@ -35,7 +35,9 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <a className="btn btn-danger" type="button">Logout</a>
+          <a className="btn btn-danger" type="button">
+            Log Out
+          </a>
         </div>
       </div>
     </nav>
