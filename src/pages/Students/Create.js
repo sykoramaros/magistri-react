@@ -1,4 +1,4 @@
-import React, { use } from "react"
+import React from "react"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { AddStudent } from "../../Services/StudentService/AddStudent"
@@ -8,7 +8,7 @@ const Create = () => {
     firstName: "",
     lastName: "",
     dateOfBirth: "",
-  })  
+  })
 
   const navigate = useNavigate()
 

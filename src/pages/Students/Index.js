@@ -3,8 +3,6 @@ import { Link } from "react-router-dom"
 import StudentCard from "../../components/StudentCard/StudentCard"
 import { useEffect, useState } from "react"
 import { GetStudents } from "../../Services/StudentService/GetStudents"
-import { UpdateStudent } from "../../Services/StudentService/UpdateStudent"
-import { DeleteStudent } from "../../Services/StudentService/DeleteStudent"
 
 const Index = () => {
   const [students, setStudents] = useState([])
@@ -14,26 +12,6 @@ const Index = () => {
       .then((response) => setStudents(response.data))
       .catch((error) => console.error("Error listing students", error))
   }, [])
-
-  const HandleUpdateStudent = (id, updatedStudent) => {
-    UpdateStudent(id, updatedStudent)
-      .then((response) =>
-        setStudents(
-          students.map((student) =>
-            student.id === id ? response.data : student
-          )
-        )
-      )
-      .catch((error) => console.error("Error updating student", error))
-  }
-
-  const HandleDeleteStudent = (id) => {
-    DeleteStudent(id)
-      .then((response) =>
-        setStudents(students.filter((student) => student.id !== id))
-      )
-      .catch((error) => console.error("Error deleting student", error))
-  }
 
   return (
     <div className="container">
