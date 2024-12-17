@@ -16,7 +16,7 @@ const StudentCard = ({item}) => {
     <div className="card border-primary mb-3 shadow-sm w-100">
       <h5 className="card-header bg-transparent border-primary">{item.firstName} {item.lastName}</h5>
       <div className="card-body">
-        <h5 className="card-title text-success">Info</h5>
+        <h4 className="card-title text-success">Info</h4>
         <p className="card-text fst-italic">
           <span>ID: {item.id}</span>
           <br />

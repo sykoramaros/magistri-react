@@ -5,7 +5,9 @@ import Privacy from "./Pages/Privacy/Privacy"
 import Students from "./Pages/Students/Index"
 import StudentCreate from "./Pages/Students/Create"
 import StudentEdit from "./Pages/Students/Edit"
-import Subjects from "./Pages/Subjects/Subjects"
+import Subjects from "./Pages/Subjects/Index"
+import SubjectCreate from "./Pages/Subjects/Create"
+import SubjectEdit from "./Pages/Subjects/Edit"
 import Grades from "./Pages/Grades/Grades"
 import NotFound from "./Pages/Shared/NotFound"
 import Error from "./Pages/Shared/Error"
@@ -22,10 +24,12 @@ const App = () => {
           <Route path="/students/create" element={<StudentCreate />} />
           <Route path="/students/edit/:id" element={<StudentEdit />} />
           <Route path="/subjects" element={<Subjects />} />
+          <Route path="/subjects/create" element={<SubjectCreate />} />
+          <Route path="/subjects/edit/:id" element={<SubjectEdit />} />
           <Route path="/grades" element={<Grades />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/error" element={<Error />} />
         </Route>
+          <Route path="/error" element={<Error />} />
       </Routes>
     </BrowserRouter>
   )
